@@ -1,0 +1,36 @@
+*viww.txt*  The vim web wowser
+
+==============================================================================
+viww                                                                 *viww*
+
+Tiny Neovim remote plugin:
+>
+  curl -> pandoc -> html -> plain text
+<
+
+Install this repo, or place the file at:
+>
+  rplugin/python3/viww.py
+<
+
+Then run:
+>
+  :UpdateRemotePlugins
+<
+
+Commands:
+>
+  :Viww {url-or-search}
+  :ViwwFollow [n]
+  :ViwwBack
+  :ViwwReload
+<
+
+Buffer mappings:
+>
+  <CR>  follow link under cursor
+  H     back
+  R     reload
+<
+
+No JavaScript, CSS, images, forms, or sessions.
