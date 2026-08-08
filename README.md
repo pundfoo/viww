@@ -1,28 +1,22 @@
 # viww
 
-The vim web wowser.
+The vim web wowser. Inspired by Emacs' Web Wowser.
 
-License: GPL-3.0-or-later.
+`viww` is a single file rplugin for neovim inspired by emacs' eww. It is a thin wrapper around
+`curl -> pandoc -> (html => plain)`
 
-`viww` is a tiny Neovim remote plugin wrapped around:
+`:Viww keywords` searches duckduckgo by default or `:Viww {url}` opens the html as plain text.
 
-```text
-curl -> pandoc -> html -> plain text
-```
-
-It opens the rendered text in a scratch buffer and appends numbered links.
+Requires `pynvim`, `curl`, and `pandoc`.
 
 ## Install
 
-Requirements: Neovim Python provider with `pynvim`, `curl`, and `pandoc`.
-
-Put the file here:
+Just put the file like so in your runtimepath:
 
 ```text
 rplugin/python3/viww.py
 ```
-
-Or point any plugin manager at this repo.
+Or point your plugin manager to this repo.
 
 Then run:
 
@@ -37,7 +31,7 @@ Restart Neovim if needed.
 ```vim
 :Viww https://example.com
 :Viww example.com
-:Viww search terms
+:Viww terms keywords quick search
 ```
 
 In a viww buffer:
